@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>150047 - Adarsh Srivastava</title>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/mathjs/3.16.1/math.min.js"></script>
+
+  <!-- load http://maurizzzio.github.io/function-plot/ -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js"></script>
+  <script src="https://wzrd.in/standalone/function-plot@1.14.0"></script>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <script type="text/javascript" src="numerical.js"></script>
+
+  
+</head>
+<body>
+<div class="container">
+  <div class="row">
+  <div class="col-lg-6">
+  
+  <div class="form-group row">
+  <h3> Input</h3>
+    <select id="methods" class="form-control">
+      <option>---Choose a method----</option>
+      <option value="bisection">Bisection Method</option>
+      <option value="falseposition">False Position Method</option>
+      <option value="fixedpoint">Fixed Point Method</option>
+      <option value="secant">Secant Method</option>
+      <option value="newton">Newton Method</option>
+      <option value="muller">Muller Method</option>
+    </select>
+    <br>
+    <input type="text" class="form-control" id="eq" value="" placeholder="f(x)" />
+    <input type="text" class="form-control" id="phi" value="" placeholder="phi(x) for Fixed Point" />
+    <input type="text" class="form-control" id="fxprime" value="" placeholder="f'(x) for Newton" />
+    <br>
+  
+    <input type="text"  id="x1" placeholder="Guess 1">
+    <input type="text"  id="x2" placeholder="Guess 2">
+    <input type="text"  id="x3" placeholder="Guess 3 (for Muller)">
+    <br>
+    <br>
+    <input type="text"  id="numberOfIterations" placeholder="Maximum Iterations">
+    <input type="text"  id="maximumRelativeError" placeholder="Maximum Relative Error">
+    <br>
+    <br>
+    <input type="button" value="Compute" onclick="compute()" />
+    <h4>The Root is = <p id="root"></p></h4>
+    
+  </div>
+  
+  </div>
+  <div class="col-lg-6">
+  <div id="plot" style="height: 40%"></div>
+  </div>
+  </div>
+   
+</div>
+    <div id="errorPlot"></div>  
+<script>
+  
+</script>
+
+</body>
+</html>
